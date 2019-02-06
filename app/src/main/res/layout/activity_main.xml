@@ -75,6 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:background="@color/light_orange"
+                android:elevation="16dp"
                 android:padding="8dp"
                 android:textAlignment="center"
                 android:textSize="18sp" />
@@ -99,6 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:background="@color/light_orange"
+                android:elevation="16dp"
                 android:padding="8dp"
                 android:textAlignment="center"
                 android:textSize="18sp" />
