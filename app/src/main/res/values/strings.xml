@@ -4,4 +4,5 @@
     <string name="tip_percentage">15%</string>
     <string name="total">Total</string>
     <string name="enter_amount">Enter amount...</string>
+    <string name="initTipAmt">$0.00</string>
 </resources>

@@ -21,7 +21,7 @@
             android:layout_height="match_parent" >
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/amountEditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
@@ -41,7 +41,7 @@
             android:layout_marginTop="16dp">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/percentTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -49,7 +49,7 @@
                 android:textSize="18sp" />
 
             <SeekBar
-                android:id="@+id/seekBar"
+                android:id="@+id/percentSeekBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
@@ -71,13 +71,12 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/tipTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:background="@color/light_orange"
                 android:padding="8dp"
-                android:text="TextView"
                 android:textAlignment="center"
                 android:textSize="18sp" />
         </TableRow>
@@ -96,13 +95,12 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/totalTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:background="@color/light_orange"
                 android:padding="8dp"
-                android:text="TextView"
                 android:textAlignment="center"
                 android:textSize="18sp" />
         </TableRow>
