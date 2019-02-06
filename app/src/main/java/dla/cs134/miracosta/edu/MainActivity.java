@@ -12,6 +12,20 @@ import edu.miracostacollege.cs134.tipcalculator.Bill;
 import java.text.NumberFormat;
 import java.util.Locale;
 
+/**
+ * Tip calculator - Calculates tip for a restaurant bill
+ * Dennis La
+ * CS134
+ *
+ * Algorithm:
+ * 1. Instantiate the views and a Bill object
+ * 2. Set the seekbar, tip percent, tip and total textviews to defaults
+ * 3. When seekbar is changed: update tipPercent on Bill to the progress, update tip percent,
+ * tip amount and total amount text views
+ * 4. When the edit text is changed: update Bill and then update the tip amount and total amount
+ * text views
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     //member variables to format as currency or percent (NumberFormat)
@@ -42,8 +56,10 @@ public class MainActivity extends AppCompatActivity {
         //init our model
         currentBill = new Bill();
 
-        //set the tip percent to match the seek br
+        //set the tip percent to match the seek bar
         currentBill.setTipPercent(percentSeekBar.getProgress() / 100.0);
+        //update text view for percent tip
+        percentTextView.setText(percent.format(currentBill.getTipPercent()));
 
         //make tip and total text view show 0.0
         tipTextView.setText(currency.format(currentBill.getTipAmount()));
@@ -54,12 +70,11 @@ public class MainActivity extends AppCompatActivity {
         percentSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                //change the label of the tip percent
-                percentTextView.setText(percent.format(progress / 100.0));
 
                 //update model
                 currentBill.setTipPercent(progress / 100.0);
 
+                //change the label of the tip percent, tip and total amount text views
                 percentTextView.setText(percent.format(currentBill.getTipPercent()));
                 tipTextView.setText(currency.format(currentBill.getTipAmount()));
                 totalTextView.setText(currency.format(currentBill.getTotalAmount()));
